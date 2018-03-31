@@ -10,7 +10,7 @@
     ec2_group:
         name: newgrp
         description: sec group for allowing traffic on ports 22 and 80 and 443
-        vpc_id: vpc-37cf7e4e
+        vpc_id: vpc-a17e41c7
         region: us-west-2
         rules:
           - proto: tcp
@@ -33,10 +33,10 @@
         key_name: key
         region: us-west-2
         instance_type: t2.micro
-        image: ami-f2d3638a
+        image: ami-223f945a
         count: 1
         monitoring: no
-        vpc_subnet_id: subnet-5ed13b27
+        vpc_subnet_id: subnet-e33c7a85
         assign_public_ip: yes
         group: newgrp
     register: ec2_out
