@@ -7,7 +7,7 @@
   tasks:
   - name: Create an EBS Volume
     ec2_vol:
-    instance: 'i-027e1d3e9121f021a'
+    instance: 'i-00311b0ca626c280f'
     volume_size: 1
     device_name: /dev/xvdf7
     volume_type: gp2
