@@ -1,6 +1,8 @@
 --- #Creating an EC2 Instance in Custom VPC
        # 1>Creating a custom Security Group
        # 2>Spinning an EC2 Instance
+       # 3>Adding the newly created EC2 to the hosts file
+       # 4>SSH into the new EC2 and install HTTPD
        
 - hosts: localhost
   connection: local
