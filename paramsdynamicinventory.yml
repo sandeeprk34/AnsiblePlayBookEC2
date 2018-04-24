@@ -7,5 +7,5 @@
   tasks: 
   - name: Install HTTPD
     yum: pkg=httpd state=absent
-   register: result
+    register: result
  - debug: var=result
