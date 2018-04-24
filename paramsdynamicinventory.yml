@@ -8,4 +8,4 @@
   - name: Install HTTPD
     yum: pkg=httpd state=absent
     register: result
-  - debug: var=result
+ - debug: var=result
