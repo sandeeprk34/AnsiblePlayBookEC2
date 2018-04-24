@@ -1,7 +1,7 @@
 ---
 - hosts: "{{ any }}"
   connection: ssh
-
+  remote_user: ec2-user
   gather_facts: yes
   tasks: 
   - name: Install HTTPD
