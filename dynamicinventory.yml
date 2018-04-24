@@ -1,0 +1,9 @@
+---
+- hosts: "{{ hostname }}"
+  connection: ssh
+  user: ec2-user
+  sudo: yes
+  gather_facts: yes
+  tasks: 
+  - name: Install HTTPD
+    yum: pkg=httpd state=latest
