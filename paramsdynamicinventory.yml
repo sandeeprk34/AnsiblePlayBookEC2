@@ -7,3 +7,13 @@
   tasks: 
   - name: Install HTTPD
     yum: pkg=httpd state=absent
+    tags: 
+      - httpdtag
+  - name: Install NGINX
+    yum: pkg=nginx state=latest
+    tags: 
+     - nginxtag
+  - name: Install TELNET
+    yum: pkg=telnet state=latest
+    tags: 
+      - telnettag
