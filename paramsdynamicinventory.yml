@@ -7,13 +7,5 @@
   tasks: 
   - name: Install HTTPD
     yum: pkg=httpd state=absent
-    tags: 
-      - httpdtag
-  - name: List all the contents
-    command: ls -al 
-    tags: 
-       - listtag
-  - name: Create a file
-    command: touch file1.txt
-    tags: 
-       - createtag
+    register: result
+  - debug: var=result
