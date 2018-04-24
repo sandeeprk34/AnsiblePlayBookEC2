@@ -13,7 +13,7 @@
     yum: pkg=telnet state=absent
     tags: 
       - telnettag
-   - name: Install LYNX
-     yum: pkg=lynx state=latest
-     tags: 
+  - name: Install LYNX
+    yum: pkg=lynx state=latest
+    tags: 
        - lynxtag
