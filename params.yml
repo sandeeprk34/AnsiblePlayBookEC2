@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ any }}"
+- hosts: all
   connection: ssh
   user: ec2-user
   sudo: yes
