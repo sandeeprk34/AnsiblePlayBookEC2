@@ -5,7 +5,5 @@
   sudo: yes
   gather_facts: yes
   tasks: 
-  - name: Install HTTPD
-    yum: pkg=httpd state=absent
-    register: result
- - debug: var=result
+- name: Install HTTPD
+  yum: pkg=httpd state=absent
