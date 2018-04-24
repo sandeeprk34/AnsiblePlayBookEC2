@@ -9,11 +9,11 @@
     yum: pkg=httpd state=absent
     tags: 
       - httpdtag
-  - name: 
-    yum: pkg=nginx state=absent
-    tags: 
-     - nginxtag
   - name: Install TELNET
     yum: pkg=telnet state=absent
     tags: 
       - telnettag
+   - name: Install LYNX
+     yum: pkg=lynx state=latest
+     tags: 
+       - lynxtag
