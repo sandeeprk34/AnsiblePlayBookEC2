@@ -52,6 +52,7 @@
   - name: Create an EBS Volume
     ec2_vol:
      instance: "{{ item.id }}"
+     region: us-west-2
      volume_size: 1
      device_name: /dev/xvdf7
      volume_type: gp2
