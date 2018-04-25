@@ -6,6 +6,8 @@
   gather_facts: yes
   tasks:
   - name: Get Ec2 Instance id
-    ec2_instance_facts:
+    ec2_instance_facts: 
+      filters:
+       " Instance State: Running"
     register: insid
   - debug: var=insid
