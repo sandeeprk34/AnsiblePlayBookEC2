@@ -49,4 +49,10 @@
     ec2_instance_facts:
     register: insid
   - debug: var=insid
+  - name: Create an EBS Volume
+    ec2_vol:
+    instance: "insid.instance_id"
+    volume_size: 1
+    device_name: /dev/xvdf7
+    volume_type: gp2
   
