@@ -1,6 +1,7 @@
 --- #Creating an EC2 Instance in Custom VPC
        # 1>Creating a custom Security Group
        # 2>Spinning an EC2 Instance
+       # 3>Creating and Attaching an additional EBS volume
        
 - hosts: localhost
   connection: local
@@ -45,10 +46,6 @@
         group: newgrp
     register: ec2_out
   - debug: var=ec2_out
-  #- name: Get Ec2 Instance id
-   # ec2_instance_facts:
-   # register: insid
-  #- debug: var=insid
   - name:  Wait for SSH to come up in the newly created EC2 Instances
     wait_for: 
         host: "{{ item.private_ip }}"
