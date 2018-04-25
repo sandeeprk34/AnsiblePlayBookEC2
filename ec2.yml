@@ -47,6 +47,12 @@
         group: newgrp
     register: ec2_out
   - debug: var=ec2_out
+    ec2_instance_facts:
+    register: facts
+  - debug: var=facts
+    ec2_metadata_facts:
+    register: metadata
+  - debug: var=metadata
   - name:  Wait for SSH to come up in the newly created EC2 Instances
     wait_for: 
         host: "{{ item.private_ip }}"
