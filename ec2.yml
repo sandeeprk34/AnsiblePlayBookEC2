@@ -1,7 +1,8 @@
 --- #Creating an EC2 Instance in Custom VPC
        # 1>Creating a custom Security Group
        # 2>Spinning an EC2 Instance
-       # 3>Creating and Attaching an additional EBS volume
+       # 3>Creating and Attaching an additional EBS volume[For attaching an EBS volume,EC2 instance should be running,so added a Wait for SSH Step.
+       
        
 - hosts: localhost
   connection: local
