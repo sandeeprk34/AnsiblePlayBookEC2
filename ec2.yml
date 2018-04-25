@@ -50,13 +50,13 @@
    # register: insid
   #- debug: var=insid
   - name:  Wait for SSH to come up in the newly created EC2 Instances
-  wait_for: 
-     host: "{{ item.private_ip }}"
-     port: 22
-     delay: 10
-     timeout: 320
-     state: started
-  with_items: "{{ ec2_out.instances }}"
+    wait_for: 
+        host: "{{ item.private_ip }}"
+        port: 22
+        delay: 10
+        timeout: 320
+        state: started
+    with_items: "{{ ec2_out.instances }}"
   - name: Create an EBS Volume
     ec2_vol:
      instance: "{{ item.id }}"
