@@ -45,4 +45,8 @@
         group: newgrp
     register: ec2_out
   - debug: var=ec2_out
+  - name: Get Ec2 Instance id
+    ec2_instance_facts:
+    register: insid
+  - debug: var=insid
   
