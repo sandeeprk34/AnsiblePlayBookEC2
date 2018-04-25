@@ -1,0 +1,11 @@
+---
+
+- hosts: localhost
+  connection: local
+  sudo: yes
+  gather_facts: yes
+  tasks:
+  - name: Get Ec2 Instance id
+    ec2_instance_facts:
+    register: insid
+  - debug: var=insid
