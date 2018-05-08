@@ -1,0 +1,9 @@
+---
+- hosts: appgrp
+  connection: ssh
+  remote_user: user
+  sudo: yes
+  gather_facts: no
+  tasks:
+  - name: Install HTTPD
+    yum: pkg=httpd state=latest
