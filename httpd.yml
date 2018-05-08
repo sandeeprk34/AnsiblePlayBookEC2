@@ -6,4 +6,4 @@
   gather_facts: no
   tasks:
   - name: Install HTTPD
-    yum: pkg=httpd state=latest
+    yum: pkg=httpd state=absent
