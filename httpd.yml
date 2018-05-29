@@ -1,5 +1,5 @@
 ---
-- hosts: "{{ myhost }}"
+- hosts: appgrp
   connection: ssh
   remote_user: user
   sudo: yes
